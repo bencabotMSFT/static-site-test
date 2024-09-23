@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "scripts": { 
     "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "build": "echo 'Building the project...' && mkdir -p dist && cp -r * dist/"
+    "build": "mkdir -p dist && rsync -av --exclude='dist' ./ dist/"
   }
 }
