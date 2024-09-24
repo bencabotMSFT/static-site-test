@@ -1,5 +1,5 @@
 // Load environment variables from .env file
-require('dotenv').config();
+// require('dotenv').config();
 
 document.getElementById('send-button').addEventListener('click', sendMessage);
 
@@ -18,7 +18,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'api-key': `${process.env.API_KEY}`
+            'api-key': `6a783eba417f47d9a2738ace6694dac8`
         },
         body: JSON.stringify({
             "messages": [
