@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Embeds -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Chat Interface</title>
-    <style>
-        #chat-container {
-            width: 50%;
-            margin: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .message {
-            margin: 10px 0;
-        }
-        .user-message {
-            text-align: right;
-        }
-        .assistant-message {
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
     <div id="chat-container">
-        <div id="chat-log"></div>
-        <input type="text" id="user-input" placeholder="Type your message here..." />
-        <button id="send-button">Send</button>
+        <div id="message-container">
+            <div class="message user-message">Hello!</div>
+            <div class="message assistant-message">Hello! How can I assist you today?</div>
+        </div>
+        <div class="prompt-container">
+            <input type="text" id="prompt-input" placeholder="Type your message here..." />
+            <button id="send-button">Send</button>
+        </div>
     </div>
+    
     <script src="js/chat.js"></script>
 </body>
 </html>

@@ -4,14 +4,14 @@
 document.getElementById('send-button').addEventListener('click', sendMessage);
 
 function sendMessage() {
-    const userInput = document.getElementById('user-input').value;
+    const userInput = document.getElementById('prompt-input').value;
     if (!userInput) return;
 
     // Add user's message to the chat log
     addMessageToChatLog(userInput, 'user-message');
 
     // Clear the input field
-    document.getElementById('user-input').value = '';
+    document.getElementById('prompt-input').value = '';
 
     // Send the user's message to the GPT-4o model
     fetch('https://ai-nebulaaihub541980892123.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-15-preview', {
@@ -41,7 +41,7 @@ function sendMessage() {
 }
 
 function addMessageToChatLog(message, className) {
-    const chatLog = document.getElementById('chat-log');
+    const chatLog = document.getElementById('message-container');
     const messageElement = document.createElement('div');
     messageElement.className = `message ${className}`;
     messageElement.innerText = message;
