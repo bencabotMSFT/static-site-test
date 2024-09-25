@@ -18,7 +18,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'api-key': `6a783eba417f47d9a2738ace6694dac8`
+            'api-key': process.env.gpt4o_api_key
         },
         body: JSON.stringify({
             "messages": [
@@ -44,7 +44,10 @@ function addMessageToChatLog(message, className) {
     const chatLog = document.getElementById('message-container');
     const messageElement = document.createElement('div');
     messageElement.className = `message ${className}`;
-    messageElement.innerText = message;
+    
+    const timestamp = new Date().toLocaleTimeString();
+    messageElement.innerHTML = `<span class="timestamp">${timestamp}</span> ${message}`;
+    
     chatLog.appendChild(messageElement);
     chatLog.scrollTop = chatLog.scrollHeight; // Scroll to the bottom
 }
