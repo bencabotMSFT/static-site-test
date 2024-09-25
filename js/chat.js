@@ -18,7 +18,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'api-key': process.env.gpt4o_api_key
+            'api-key': process.env.GPT4O_API_KEY
         },
         body: JSON.stringify({
             "messages": [
