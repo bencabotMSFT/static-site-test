@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "build": "npx webpack --config webpack.config.js && npx mkdirp dist && npx copyfiles './*' dist"
+    "build": "npx webpack --config webpack.config.js && npx mkdirp dist && npx copyfiles 'src/**/*' dist"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
