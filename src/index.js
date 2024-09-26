@@ -1,6 +1,7 @@
 // Load environment variables from .env file
 // require('dotenv').config();
 
+
 document.getElementById('send-button').addEventListener('click', sendMessage);
 
 function sendMessage() {
