@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "build": "npx webpack --config webpack.config.js && if not exist dist mkdir dist && xcopy /E /I .\\ .\\dist\\"
+    "build": "npx webpack --config webpack.config.js && npx mkdirp dist && npx copyfiles -u 1 './**/*' dist"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
@@ -12,6 +12,8 @@
     "dotenv-webpack": "^8.1.0",
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0",
-    "babel-loader": "^8.0.0"
+    "babel-loader": "^8.0.0",
+    "mkdirp": "^1.0.4",
+    "copyfiles": "^2.4.1"
   }
 }
