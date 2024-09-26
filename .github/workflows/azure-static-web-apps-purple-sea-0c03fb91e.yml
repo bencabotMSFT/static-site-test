@@ -32,6 +32,8 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "/" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          GPT4O_API_KEY: 6a783eba417f47d9a2738ace6694dac8
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
