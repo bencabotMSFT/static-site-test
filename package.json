@@ -1,19 +1,17 @@
 {
-  "name": "vanilla-basic",
+  "name": "static-site-test",
   "version": "1.0.0",
+  "description": "A simple static site with server-side handling of sensitive operations",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "build": "npx webpack --config webpack.config.js && npx mkdirp dist && npx copyfiles 'index.html' 'index.js' 'css/**/*' dist"
+    "start": "node server.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "express": "^4.17.1",
+    "node-fetch": "^3.0.0",
+    "dotenv": "^8.2.0"
   },
-  "devDependencies": {
-    "dotenv-webpack": "^8.1.0",
-    "webpack": "^5.0.0",
-    "webpack-cli": "^4.0.0",
-    "babel-loader": "^8.0.0",
-    "mkdirp": "^1.0.4",
-    "copyfiles": "^2.4.1"
-  }
+  "author": "",
+  "license": "ISC"
 }
